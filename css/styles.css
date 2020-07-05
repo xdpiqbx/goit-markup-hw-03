@@ -1,0 +1,353 @@
+:root{
+    --main-font-family: 'Roboto', sans-serif;
+    --logo-font-family: 'Raleway', sans-serif;
+    
+    --main-font-color: #212121;
+    --main-font-on-dark-fon-color: #ffffff;
+    --secondary-font-color: #757575;
+    --address-footer-a-color: rgba(255, 255, 255, 0.6);
+
+    --secondary-bg-color: #F5F4FA;
+    --member-card-bg-color: #ffffff;
+    --what-we-do-card-header-bg-color: rgba(47, 48, 58, 0.8);
+    --footer-bg-color: #2F303A;
+
+    --header-border-color: #ECECEC;
+    --clients-border-color: #AFB1B8;
+    --portfolio-card-border-color: #EEEEEE;
+    
+    --main-hover-color: #2196F3;
+
+    --max-width: 1250px;
+}
+
+
+
+/* body ===================================================================== */
+body{
+    font-family: var(--main-font-family);
+    color: var(--main-font-color);
+    letter-spacing: 0.03em;
+}
+
+
+
+/* some reset ===================================================================== */
+a{ text-decoration: none; }
+
+address{ font-style: normal; }
+
+ul{ list-style-type: none; }
+
+
+
+/* Header ===================================================================== */
+header{
+    color: var(--main-font-color);
+}
+
+
+    header li, header a{
+        font-weight: 700;
+        vertical-align: middle;
+        color: var(--main-font-color);
+    }
+
+        .logo{
+            font-family: var(--logo-font-family);
+            font-size: 26px;
+            color: var(--main-font-color);
+            text-decoration: none;
+        }
+
+            .logo span{ color: var(--main-hover-color); }
+
+        .top,
+        .top-nav-ul,
+        .addres-header{
+            font-size: 14px;
+        }
+
+            .addres-header a{ color: var(--secondary-font-color); }
+
+        .contact li{
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+
+            .envelope{ /* small icon */
+                background-image: url("../images/envelope.svg");
+            }
+
+            .phone{ /* small icon */
+                background-image: url("../images/smartphone.svg");
+            }
+
+    /*menu hover effect ==================== */
+    .active-page,
+    .top-nav-ul a:hover,
+    .top-nav-ul a:focus{
+        color: var(--main-hover-color);
+    }
+
+    address a:hover,
+    address a:focus{ color: var(--main-hover-color); }
+
+/*Footer ===================================================================== */
+footer{
+    color: var(--main-font-on-dark-fon-color);
+    background-color: var(--footer-bg-color);
+}
+    .wrapper-in-footer{
+        max-width: var(--max-width);
+    }
+
+    footer div{
+        vertical-align: top;
+    }
+
+        footer .logo{ color: var(--main-font-on-dark-fon-color); }
+
+            .addres-footer ul li{
+                display: block;
+            }
+    
+    .addres-footer ul li a{
+        font-family: var(--main-font-family);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.7;
+        font-size: 14px;
+        color: var(--address-footer-a-color);
+    }
+
+
+/*Main element ===================== index.html ================================================*/
+.hero{
+    text-align: center;
+    background-image: url("../images/hero-image.jpg");
+    background-position: center;
+}
+
+    .wrapper-bg-transparent-in-hero{
+        background-color: rgba(47, 48, 58, 0.8);
+        height: 100%;
+    }
+
+    .hero h1{
+        color:var(--main-font-on-dark-fon-color);
+        font-family: var(--main-font-family);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    .hero button{
+        line-height: 1.9;
+        background-color: var(--main-hover-color);
+        font-family: var(--main-font-family);
+        color: var(--secondary-bg-color);
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+    }
+
+.wrapper-full-width{
+    background-color: var(--secondary-bg-color);
+}
+
+.section-title{
+    font-size: 36px;
+    line-height: 1.17;
+}
+
+
+
+/*in section benefits ===================== index.html ================================================*/
+.hidden-header-h{
+    line-height: 0;
+    font-size: 0;
+}
+
+.benefits-list{
+    text-align: center;
+}
+
+    .benefits-list li{
+        width: 270px;
+        text-align: left;
+    }
+
+        .benefits-list div{
+            text-align: center;
+            background-color: var(--secondary-bg-color);
+            line-height: 120px;
+        }
+
+            .benefits-list div img{
+                vertical-align: middle;
+            }
+
+        .benefits-list p{
+            font-family: var(--main-font-family);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--secondary-font-color);
+        }
+
+
+
+/*in section what-we-do ===================== index.html ================================================*/
+.what-we-do a{
+    color: var(--main-font-on-dark-fon-color);
+}
+
+    .what-we-do h3{
+        background-color: var(--what-we-do-card-header-bg-color);
+        line-height: 70px;
+        font-family: var(--main-font-family);
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+
+
+/*in section our-team ===================== index.html ================================================*/
+.our-team{
+    text-align: center;
+}
+        
+    .our-team-member{
+        background-color:var(--member-card-bg-color);
+        width: 270px;
+        text-align: center;
+    }
+
+        .our-team-member b{
+            font-family: var(--main-font-family);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.9;
+            text-align: center;
+            color: var(--secondary-font-color);
+        }
+
+            .social li,
+            .join li{
+                height: 44px;
+                background-repeat: no-repeat;
+            }
+
+                .social a,
+                .join a{ /* .join icons in footer */
+                    display: block;
+                    width: 44px;
+                    height: 44px;
+                }
+            
+            .instagram {background-image: url("../images/instagramico.svg");}
+            .twitter {background-image: url("../images/twitterico.svg");}
+            .facebook {background-image: url("../images/facebookico.svg");}
+            .linkedin {background-image: url("../images/linkedinico.svg");}
+            
+
+
+/*in section clients ===================== index.html ================================================*/
+.clients{
+    text-align: center;
+}
+
+    .clients li{
+        width: 170px;
+        line-height: 90px;
+    }
+
+    .clients a{
+        background-position: center;
+        background-repeat: no-repeat;
+        display:block;
+    }
+
+        .client1{ background-image: url("../images/clients/client1.svg"); }
+        .client2{ background-image: url("../images/clients/client2.svg"); }
+        .client3{ background-image: url("../images/clients/client3.svg"); }
+        .client4{ background-image: url("../images/clients/client4.svg"); }
+        .client5{ background-image: url("../images/clients/client5.svg"); }
+        .client6{ background-image: url("../images/clients/client6.svg"); }
+
+
+
+/*in section portfolio ===================== portfolio.html ================================================*/    
+.portfolio{
+    max-width: var(--max-width);
+}
+
+    .btn-group{
+        text-align: center;
+    }
+
+        .btn-group button{
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: var(--secondary-bg-color);
+            font-family: var(--main-font-family);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-group button:hover,
+        .btn-group button:focus{
+            background-color: var(--main-hover-color);
+            color: var(--secondary-bg-color);
+        }
+
+    .ul-portfolio{
+        text-align: center;
+    }
+
+        .ul-portfolio li{
+            width: 370px;
+            overflow: hidden;
+        }
+        
+        .ul-portfolio a{
+            text-decoration: none;
+            width: inherit;
+        }
+            .ul-portfolio li h2,
+            .ul-portfolio li p{
+                text-align: left;
+            } 
+
+        .ul-portfolio a h2{
+            color: var(--main-font-color);
+            font-family: var(--main-font-family);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 2.25;
+            letter-spacing: 0.06em;
+        }
+
+        .ul-portfolio p{
+            color: var(--secondary-font-color);
+            font-family: var(--main-font-family);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 2.14;
+        }
+
+        .ul-portfolio .hover-text{
+            visibility: hidden;
+        }
