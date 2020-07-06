@@ -6,4 +6,4 @@
 
 <a href="https://github.com/goitacademy/html-css-homework/blob/master/criteria.md"><h3>Общие критерии приёма работ</h3></a>
 
-<img src="https://goit.ua/wp-content/themes/1/images/Layer.png"> [Student detected]
+<img src="https://goit.ua/wp-content/themes/1/images/Layer.png"> <b style="line-height: 15px">[Student detected]</b>
