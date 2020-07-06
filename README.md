@@ -5,3 +5,4 @@
 <a href="https://github.com/goitacademy/html-css-homework/blob/master/03-flexbox.md"><h3>Домашнее задание</h3></a>
 
 <a href="https://github.com/goitacademy/html-css-homework/blob/master/criteria.md"><h3>Общие критерии приёма работ</h3></a>
+<img src="https://goit.ua/wp-content/themes/1/images/Layer.png">
