@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,29 +12,21 @@
 
 <body>
     <header>
-        <div class="wrapper-in-header">
-            <nav class="top">
+        <div class="wrapper-in-header section flex-container">
+            <nav class="top flex-container">
                 <a class="logo" href="./index.html" aria-label="Главная страница"><span>Web</span> Studio</a>
-                <ul class="top-nav-ul">
+                <ul class="top-nav-ul flex-container">
                     <li><a href="./index.html">Студия</a></li>
                     <li><a class="active-page" href="#">Портфолио</a></li>
                     <li><a href="#">Контакты</a></li>
-                    <li><a href="https://xdpiqbx.github.io/goit-html-my/" target="_blank">Просто оставлю это сдесь</a></li>
                 </ul>
             </nav>
             <address class="addres-header">
-                <ul class="contact">
+                <ul class="contact flex-container">
                     <li class="envelope">
-                        <a href="mailto:info@devstudio.com" aria-label="e-mail">
-                            &nbsp; &nbsp; &nbsp;info@devstudio.com
-                            <!--тут я типа не знаю про padding ;)-->
-                        </a>
+                        <a href="mailto:info@devstudio.com" aria-label="e-mail">info@devstudio.com</a>
                     </li>
-                    <li class="phone">
-                        <a href="tel:+380961111111" aria-label="Телефон">
-                            &nbsp; &nbsp; &nbsp;+380 (96) 111 11 11
-                            <!-- и тут тож ;)-->
-                        </a>
+                    <li class="phone"><a href="tel:+380961111111" aria-label="Телефон">+380 (96) 111 11 11</a>
                     </li>
                 </ul>
             </address>
@@ -44,14 +35,14 @@
     <main>
         <section class="section portfolio">
             <h1 class="hidden-header-h">Портфолио</h1>
-            <ul class="btn-group">
+            <ul class="btn-group flex-container">
                 <li><button type="button">Все</button></li>
                 <li><button type="button">Веб-сайты</button></li>
                 <li><button type="button">Приложения</button></li>
                 <li><button type="button">Дизайн</button></li>
                 <li><button type="button">Маркетинг</button></li>
             </ul>
-            <ul class="ul-portfolio">
+            <ul class="ul-portfolio flex-container">
                 <li>
                     <a href="#" aria-label="Ноутбук Технокряк">
                         <p class="hover-text" hidden>
@@ -156,8 +147,8 @@
         </section>
     </main>
     <footer>
-        <div class="wrapper-in-footer">
-            <div>
+        <div class="wrapper-in-footer section flex-container">
+            <div class="logo-and-contact">
                 <a class="logo" href="./index.html" aria-label="Главная страница"><span>Web</span> Studio</a>
                 <address class="addres-footer">
                     <ul>
@@ -169,7 +160,7 @@
             </div>
             <div class="join">
                 <b>ПРИСОЕДИНЯЙТЕСЬ</b>
-                <ul>
+                <ul class="social flex-container">
                     <li class="instagram"><a href="#" aria-label="Instagram"></a></li>
                     <li class="twitter"><a href="#" aria-label="Twitter"></a></li>
                     <li class="facebook"><a href="#" aria-label="Facebook"></a></li>
