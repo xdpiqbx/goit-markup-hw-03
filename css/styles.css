@@ -71,7 +71,7 @@ header{
 }
 
 .wrapper-in-header{
-    height: 80px;
+    min-height: 80px;
     justify-content: space-between;
 }
 
@@ -83,7 +83,7 @@ header{
 
     header li, header a{
         display: block;
-        line-height: 77px;
+        align-self: center;
         font-weight: 700;
         color: var(--main-font-color);
     }
@@ -107,13 +107,17 @@ header{
             .top-nav-ul li:not(:last-child){
                 margin-right: 50px;
             }
+
+            .top-nav-ul a{
+                line-height: 80px;
+            }
         
             .addres-header a{ color: var(--secondary-font-color); }
 
             .contact li:not(:last-child){
                 margin-right: 30px;
             }
-            
+          
             .contact li{
                 background-repeat: no-repeat;
                 background-position: left;
@@ -132,15 +136,23 @@ header{
     /*menu hover effect ==================== */
     .active-page,
     .top-nav-ul a:hover,
-    .top-nav-ul a:focus{
-        color: var(--main-hover-color);
-        border-bottom: solid 3px var(--main-hover-color);
-        border-collapse: collapse;
-    }
-    
+    .top-nav-ul a:focus,
     address a:hover,
     address a:focus{
         color: var(--main-hover-color);
+        position: relative;
+    }
+
+    .active-page::after{
+        width: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 5px;
+        background-color: var(--main-hover-color);
+        border-radius: 3px;
     }
 
 
@@ -269,16 +281,21 @@ footer{
         text-align: left;
     }
 
-        .benefits-list div{
-            text-align: center;
-            background-color: var(--secondary-bg-color);
-            line-height: 120px;
-            border-radius: 4px;
-        }
-
-            .benefits-list div img{
-                vertical-align: middle;
-            }
+    .benefits-list li::before{
+        content: '';
+        display: block;
+        height: 120px;
+        margin-bottom: 30px;
+        background-color: var(--secondary-bg-color);
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .icon-antenna::before{ background-image: url("../images/antenna.svg"); }
+    .icon-clock::before{ background-image: url("../images/clock.svg"); }
+    .icon-diagram::before{ background-image: url("../images/diagram.svg"); }
+    .icon-astronaut::before{ background-image: url("../images/astronaut.svg"); }
 
         .benefits-list p{
             font-family: var(--main-font-family);
