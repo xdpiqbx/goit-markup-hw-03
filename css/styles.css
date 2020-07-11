@@ -178,7 +178,7 @@ footer{
     .join .social{
         justify-content: space-between;
     }
-
+    
         footer .logo{ color: var(--main-font-on-dark-fon-color); }
 
     .addres-footer ul li{
@@ -350,13 +350,28 @@ footer{
     }
 
         .our-team-member b{
+            display: inline-block;
+            margin-bottom: 16px;
             font-family: var(--main-font-family);
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
-            line-height: 1.9;
             text-align: center;
             color: var(--secondary-font-color);
+        }
+
+        .our-team-member img{
+            margin-bottom: 30px;
+        }
+    
+        .our-team-member h3{
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    
+        .our-team-member .social{
+            margin-left: 32px;
+            margin-right: 32px;
         }
 
         .social{
