@@ -31,12 +31,16 @@ html {
     box-sizing: inherit;
 }
 
+
+
 /* body ===================================================================== */
 body{
     font-family: var(--main-font-family);
     color: var(--main-font-color);
     letter-spacing: 0.03em;
 }
+
+
 
 /* some reset ===================================================================== */
 a{ text-decoration: none; }
@@ -53,26 +57,44 @@ p, h2{
     margin: 0;
 }
 
-/* Header ===================================================================== */
-header{
-    color: var(--main-font-color);
-    border: 1px solid var(--header-border-color);;
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .section{
     margin: 0 auto;
-    max-width: var(--max-width);
+    padding-top: 94px;
+    padding-bottom: 94px;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.index-no-border{
-    border: 0;
+.container{
+    margin: 0 auto;
+    max-width: var(--max-width);
 }
 
-.wrapper-in-header{
-    min-height: 80px;
+
+
+/* Header ===================================================================== */
+header{
+    color: var(--main-font-color);
+    border: 1px solid var(--header-border-color);
+}
+
+header div.flex-container{
     justify-content: space-between;
+}
+
+header div.section{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.index-no-border{
+    border: 0;
 }
 
 .flex-container{
@@ -143,6 +165,7 @@ header{
         position: relative;
     }
 
+    /*menu underline ==================== */
     .active-page::after{
         width: 100%;
         content: "";
@@ -156,56 +179,6 @@ header{
     }
 
 
-/*Footer ===================================================================== */
-footer{
-    color: var(--main-font-on-dark-fon-color);
-    background-color: var(--footer-bg-color);
-}
-    .wrapper-in-footer{
-        padding-top: 60px;
-        max-width: var(--max-width);
-    }
-
-    footer div{
-        vertical-align: top;
-    }
-
-    .logo-and-contact{
-        margin-right: 70px;
-        padding-bottom: 60px;
-    }
-
-    .logo-and-contact .logo,
-    .join b,
-    .subscribe b{
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    .join{
-        width: 206px;
-        margin-right: 94px;
-    }
-
-    .join .social{
-        justify-content: space-between;
-    }
-    
-        footer .logo{ color: var(--main-font-on-dark-fon-color); }
-
-    .addres-footer ul li{
-        margin-bottom: 9px;
-    }
-
-    .addres-footer ul li a{
-        font-family: var(--main-font-family);
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.7;
-        font-size: 14px;
-        color: var(--address-footer-a-color);
-    }
-
 
 /*Main element ===================== index.html ================================================*/
 .hero{
@@ -213,7 +186,7 @@ footer{
     background-image: url("../images/hero-image.jpg");
     background-position: center;
     height: 600px;
-    margin-bottom: 94px;
+
 }
 
     .wrapper-bg-transparent-in-hero{
@@ -222,9 +195,9 @@ footer{
     }
 
     .hero h1{
-        margin: 0;
+        margin-top:0;
+        margin-bottom: 30px;
         padding-top: 200px;
-        padding-bottom: 30px;
         color:var(--main-font-on-dark-fon-color);
         font-family: var(--main-font-family);
         font-style: normal;
@@ -262,10 +235,6 @@ footer{
 
 
 /*in section benefits ===================== index.html ================================================*/
-.benefits{
-    margin-bottom: 94px;
-}
-
 .hidden-header-h{
     line-height: 0;
     font-size: 0;
@@ -279,6 +248,10 @@ footer{
     .benefits-list li{
         width: 270px;
         text-align: left;
+    }
+
+    .benefits-list li h3{
+        margin: 0;
     }
 
     .benefits-list li::before{
@@ -309,8 +282,8 @@ footer{
 
 
 /*in section what-we-do ===================== index.html ================================================*/
-.what-we-do{
-    margin-bottom: 94px;
+.what-we-do.section{
+    padding-top: 0;
 }
 
 .section-title{
@@ -327,6 +300,7 @@ footer{
 }
 
     .what-we-do h3{
+        margin: 0;
         background-color: var(--what-we-do-card-header-bg-color);
         line-height: 70px;
         font-family: var(--main-font-family);
@@ -346,15 +320,14 @@ footer{
 
 .our-team-list{
     justify-content: space-between;
-    padding-bottom: 94px;
 }
 
 .our-team h2{
-    padding-top: 94px;
     margin-bottom: 50px;
 }
         
     .our-team-member{
+        padding-bottom: 24px;
         background-color:var(--member-card-bg-color);
         width: 270px;
         text-align: center;
@@ -387,18 +360,19 @@ footer{
         }
     
         .our-team-member .social{
-            margin-left: 32px;
-            margin-right: 32px;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .social li{
+            margin-right: 10px;
             width: 44px;
             height: 44px;
-            margin-bottom: 24px;
             justify-content: space-evenly;
             border-radius: 50%;
         }
+            .social li:last-child{
+                margin-right: 0;
+            }
 
         .social a{
             width: 44px;
@@ -436,7 +410,6 @@ footer{
 /*in section clients ===================== index.html ================================================*/
 .clients{
     text-align: center;
-    margin-top: 94px;
 }
     .clients .section-title{
         margin-bottom: 50px;
@@ -444,7 +417,6 @@ footer{
 
     .clients-list{
         justify-content: space-between;
-        margin-bottom: 94px;
     }
 
     .clients li{
@@ -475,11 +447,6 @@ footer{
 
 
 /*in section portfolio ===================== portfolio.html ================================================*/    
-.portfolio{
-    margin-top: 93px;
-    max-width: var(--max-width);
-}
-
     .btn-group{
         margin-bottom: 50px;
         text-align: center;
@@ -515,9 +482,7 @@ footer{
     .ul-portfolio{
         text-align: center;
         justify-content: space-between;
-        margin-bottom: 30px;
         overflow: hidden;
-        margin-bottom: 94px;
     }
 
         .ul-portfolio li{
@@ -563,3 +528,60 @@ footer{
                     font-weight: 400;
                     font-size: 14px;
                 }
+
+
+
+/*Footer ===================================================================== */
+footer{
+    color: var(--main-font-on-dark-fon-color);
+    background-color: var(--footer-bg-color);
+}
+
+footer div.section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+   
+    .wrapper-in-footer{
+        padding-top: 60px;
+        max-width: var(--max-width);
+    }
+
+    footer div{
+        vertical-align: top;
+    }
+
+    .logo-and-contact{
+        margin-right: 70px;
+    }
+
+    .logo-and-contact .logo,
+    .join b,
+    .subscribe b{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .join{
+        width: 206px;
+        margin-right: 94px;
+    }
+
+    .join .social{
+        justify-content: space-between;
+    }
+    
+        footer .logo{ color: var(--main-font-on-dark-fon-color); }
+
+    .addres-footer ul li{
+        margin-bottom: 9px;
+    }
+
+    .addres-footer ul li a{
+        font-family: var(--main-font-family);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.7;
+        font-size: 14px;
+        color: var(--address-footer-a-color);
+    }
